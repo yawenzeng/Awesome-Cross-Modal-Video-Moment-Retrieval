@@ -131,7 +131,7 @@
 #年度关键词：文本和视频的细粒化+强化学习+候选框关系/生成+弱监督。
 
 
-# 2020:19
+# 2020:21
 24[AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 25[AAAI 2020] Tree-Structured Policy based Progressive Reinforcement Learning for Temporally Language Grounding in Video  
 26[AAAI 2020] Learning 2D Temporal Adjacent Networks for Moment Localization with Natural Language  
@@ -151,7 +151,8 @@
 40[ArXiv 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
 41[ArXiv 2020] Video Moment Retrieval via Natural Language Queries  
 42[ArXiv 2020] Frame-wise Cross-modal Match for Video Moment Retrieval  
-43[MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos
+43[MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos  
+44[MM 2020] Jointly Cross- and Self-Modal Graph Attention Network for Query-Based Moment Localization  
 
 [AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 * 动机：当模型无法定位最佳时刻时，添加的偏移回归可能会失败。
@@ -230,6 +231,10 @@
 [MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos
 * 动机：现有工作只集中在从视频到查询的单向交互上。
 * 方法：针对句子和视频的cross-attention做双向相互。
+
+[MM 2020] Jointly Cross- and Self-Modal Graph Attention Network for Query-Based Moment Localization
+* 动机：视频大部分都无关，只有小部分视频相关，所以应该更加重视两者的融合。
+* 方法：提出模态间和模态内两种交互模式，以帧和词构图通过消息传递来增强表示。
 
 #年度关键词：任务扩展（如对全库搜索moment，增加字幕，标定鲁棒性等等），继续细化和融合，候选框关系。
 #水文趋势开始增加...
