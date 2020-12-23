@@ -151,6 +151,7 @@
 40[ArXiv 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
 41[ArXiv 2020] Video Moment Retrieval via Natural Language Queries  
 42[ArXiv 2020] Frame-wise Cross-modal Match for Video Moment Retrieval  
+43[MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos
 
 [AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 * 动机：当模型无法定位最佳时刻时，添加的偏移回归可能会失败。
@@ -226,8 +227,12 @@
 * 动机：以往的方法不能很好地捕获查询和视频帧之间的跨模态交互。
 * 方法：利用注意力对齐，做帧间的预测和边界预测两个任务。
 
+[MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos
+* 动机：现有工作只集中在从视频到查询的单向交互上。
+* 方法：针对句子和视频的cross-attention做双向相互。
 
 #年度关键词：任务扩展（如对全库搜索moment，增加字幕，标定鲁棒性等等），继续细化和融合，候选框关系。
+#水文趋势开始增加...
 
 
 ----------
