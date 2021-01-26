@@ -7,6 +7,8 @@
 
 * 有 :o: 的论文是个人认为比较突出的必看论文。
 
+* 部分重要论文已经整理在博客中：https://nakaizura.blog.csdn.net/article/details/107316185
+
 # 2017:2
 1[ICCV 2017] [CTRL] TALL Temporal Activity Localization via Language Query:o:   
 2[ICCV 2017] [MCN] Localizing Moments in Video with Natural Language:o:  
