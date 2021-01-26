@@ -1,9 +1,15 @@
 # Awesome-Cross-Modal-Video-Moment-Retrieval
-持续更新该方向的重要论文，并做一句话简评（部分文章涉及多个“创新点”，暂时只整理了最突出的贡献），完整论述请对应原文。
+持续更新该方向的重要论文，并做一句话简评。
+
+* Temporally Language Grounding，text-to-clip retrieval，query-based moment retrieval等等都是本领域的工作。旨在使用一段文本检索视频中的对应片段/时刻。
+
+* 部分文章涉及多个“创新点”，暂时只整理了最突出的贡献，完整论述请对应原文。
+
+* 有 :o: 的论文是个人认为比较突出的必看论文。
 
 # 2017:2
-1[ICCV 2017] [CTRL] TALL Temporal Activity Localization via Language Query  
-2[ICCV 2017] [MCN] Localizing Moments in Video with Natural Language  
+1[ICCV 2017] [CTRL] TALL Temporal Activity Localization via Language Query:o:   
+2[ICCV 2017] [MCN] Localizing Moments in Video with Natural Language:o:  
 
 [ICCV 2017] [CTRL] TALL Temporal Activity Localization via Language Query  
 * 动机：开山之作，点出该问题需要解决的两大困难1作为跨模态任务，如何得到适当的文本和视频表示特征，以允许跨模态匹配操作和完成语言查询。2理论上可以生成无限粒度的视频片段，然后逐一比较。但时间消耗过大，那么如何能够从有限粒度的滑动窗口做到准确的具体帧定位。
@@ -16,8 +22,8 @@
 
 
 # 2018:5
-3[MM 2018] Cross-modal Moment Localization in Videos  
-4[SIGIR 2018] Attentive Moment Retrieval in Videos  
+3[MM 2018] Cross-modal Moment Localization in Videos:o:  
+4[SIGIR 2018] Attentive Moment Retrieval in Videos:o:  
 5[EMNLP 2018] Localizing Moments in Video with Temporal Language  
 6[EMNLP 2018] Temporally Grounding Natural Sentence in Video  
 7[IJCAI 2018] Multi-modal Circulant Fusion for Video-to-Language and Backward  
@@ -49,12 +55,12 @@
 9[AAAI 2019] Multilevel language and vision integration for text-to-clip retrieval  
 10[AAAI 2019] Semantic Proposal for Activity Localization in Videos via Sentence Query  
 11[AAAI 2019] To Find Where You Talk Temporal Sentence Localization in Video with Attention Based Location Regression  
-12[AAAI 2019] Read, Watch, and Move Reinforcement Learning for Temporally Grounding Natural Language Descriptions in Videos  
-13[CVPR 2019] MAN_ Moment Alignment Network for Natural Language Moment Retrieval via Iterative Graph Adjustment  
+12[AAAI 2019] Read, Watch, and Move Reinforcement Learning for Temporally Grounding Natural Language Descriptions in Videos:o:  
+13[CVPR 2019] MAN_ Moment Alignment Network for Natural Language Moment Retrieval via Iterative Graph Adjustment:o:  
 14[CVPR Workshop 2019] Tripping through time Efficient Localization of Activities in Videos  
-15[CVPR 2019] Language-Driven Temporal Activity Localization A Semantic Matching Reinforcement Learning Model  
-16[CVPR 2019] Weakly Supervised Video Moment Retrieval From Text Queries  
-17[ICMR 2019] Cross-Modal Video Moment Retrieval with Spatial and Language-Temporal Attention  
+15[CVPR 2019] Language-Driven Temporal Activity Localization A Semantic Matching Reinforcement Learning Model:o:  
+16[CVPR 2019] Weakly Supervised Video Moment Retrieval From Text Queries:o:  
+17[ICMR 2019] Cross-Modal Video Moment Retrieval with Spatial and Language-Temporal Attention:o:  
 18[MM 2019] Exploiting Temporal Relationships in Video Moment Localization with Natural Language  
 19[NIPS 2019] Semantic Conditioned Dynamic Modulation for Temporal Sentence Grounding in Videos  
 20[SIGIR 2019] Cross-modal interaction networks for query-based moment retrieval in videos  
@@ -134,10 +140,10 @@
 # 2020:21
 24[AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 25[AAAI 2020] Tree-Structured Policy based Progressive Reinforcement Learning for Temporally Language Grounding in Video  
-26[AAAI 2020] Learning 2D Temporal Adjacent Networks for Moment Localization with Natural Language  
+26[AAAI 2020] Learning 2D Temporal Adjacent Networks for Moment Localization with Natural Language:o:  
 27[AAAI 2020] Weakly-Supervised Video Moment Retrieval via Semantic Completion Network  
-28[TIP 2020] Moment Retrieval via Cross-Modal Interaction Networks With Query Reconstruction  
-29[MM 2020] Adversarial Video Moment Retrieval by Jointly Modeling Ranking and Localization  
+28[TIP 2020] Moment Retrieval via Cross-Modal Interaction Networks With Query Reconstruction:o:  
+29[MM 2020] Adversarial Video Moment Retrieval by Jointly Modeling Ranking and Localization:o:  
 30[MM 2020] STRONG: Spatio-Temporal Reinforcement Learning for Cross-Modal Video Moment Localization  
 31[MM 2020] Dual Path Interaction Network for video Moment Localization  
 32[MM 2020] Regularized Two-Branch Proposal Networks for Weakly-Supervised Moment Retrieval in Videos  
