@@ -139,7 +139,7 @@
 #年度关键词：文本和视频的细粒化+强化学习+候选框关系/生成+弱监督。
 
 
-# 2020:21
+# 2020:22
 24[AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 25[AAAI 2020] Tree-Structured Policy based Progressive Reinforcement Learning for Temporally Language Grounding in Video  
 26[AAAI 2020] Learning 2D Temporal Adjacent Networks for Moment Localization with Natural Language:o:  
@@ -151,16 +151,17 @@
 32[MM 2020] Regularized Two-Branch Proposal Networks for Weakly-Supervised Moment Retrieval in Videos  
 33[ECCV 2020] VLANet: Video-Language Alignment Network for Weakly-Supervised Video Moment Retrieval  
 34[WACV2020] Proposal-free Temporal Moment Localization of a Natural-Language Query in Video using Guided Attention  
-35[ArXiv 2020] TVR A Large-Scale Dataset for Video-Subtitle Moment Retrieval  
+35[ECCV 2020] TVR A Large-Scale Dataset for Video-Subtitle Moment Retrieval  
 36[ArXiv 2020] Video Moment Localization using Object Evidence and Reverse Captioning  
 37[ArXiv 2020] Graph Neural Network for Video-Query based Video Moment Retrieval  
 38[ArXiv 2020] Text-based Localization of Moments in a Video Corpus  
 39[ArXiv 2020] Generating Adjacency Matrix for Video-Query based Video Moment Retrieval  
-40[ArXiv 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
+40[BMVC 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
 41[ArXiv 2020] Video Moment Retrieval via Natural Language Queries  
 42[ArXiv 2020] Frame-wise Cross-modal Match for Video Moment Retrieval  
 43[MM 2020] Fine-grained Iterative Attention Network for Temporal Language Localization in Videos  
 44[MM 2020] Jointly Cross- and Self-Modal Graph Attention Network for Query-Based Moment Localization  
+45[CVPR 2020] Dense Regression Network for Video Grounding  
 
 [AAAI 2020] Temporally Grounding Language Queries in Videos by Contextual Boundary-aware Prediction  
 * 动机：当模型无法定位最佳时刻时，添加的偏移回归可能会失败。
@@ -205,7 +206,7 @@
 * 动机：不依赖候选的端对端框架，文本注释主观性。
 * 方法：使用attention的动态过滤器（利用文本对视频的过滤），软标签分布损失解决文本注释的不确定性。
 
-[ArXiv 2020] TVR A Large-Scale Dataset for Video-Subtitle Moment Retrieval  
+[ECCV 2020] TVR A Large-Scale Dataset for Video-Subtitle Moment Retrieval  
 * 动机：视频+字幕才能进一步的理解。
 * 方法：提出一个新数据集，并设计一个类似多Transformer的模型完成不同模态的理解和融合。
 
@@ -225,7 +226,7 @@
 * 动机：现有利用图技术的方法得到的邻接矩阵是固定的。
 * 方法：使用图抽取模态内和模态间的特征关系。
 
-[ArXiv 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
+[BMVC 2020] Uncovering Hidden Challenges in Query-Based Video Moment Retrieval  
 * 讨论性文章：虽然现有技术已经取得了很好的提高，这篇文章探究了存在的两大问题，1数据集存在偏差，2评价指标不一定可靠。
 
 [ArXiv 2020] Video Moment Retrieval via Natural Language Queries  
@@ -244,9 +245,20 @@
 * 动机：视频大部分都无关，只有小部分视频相关，所以应该更加重视两者的融合。
 * 方法：提出模态间和模态内两种交互模式，以帧和词构图通过消息传递来增强表示。
 
+[CVPR 2020] Dense Regression Network for Video Grounding
+* 动机：以往训练的模型都是在正负例样本不平衡的情况下，所以作者尝试利用帧之间的距离作为更密集的监督信号。
+* 方法：预测起始结束帧，然后认为只要在ground truth中的片段都认为是正例。
+
 #年度关键词：任务扩展（如对全库搜索moment，增加字幕，标定鲁棒性等等），继续细化和融合，候选框关系。
 #水文趋势开始增加...
 
+
+# 2021:1
+46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
+
+[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
+* 动机：基于候选的方法会导致候选之间非常相似难以区别，那么直接理解内容（局部目标）的细微变化会是更好的选择。
+* 方法：提出多模态关系图模型来捕捉视频中的局部目标之间的时空关系，并且在图预训练的框架下优化特征表达。
 
 ----------
 # 稍作分类
@@ -256,7 +268,7 @@
 
 对于一.  
 
-* 模态特征的细化：模态间的交互和融合[3-9，37，39，42]，局部对齐[17-19]，模态表征细粒度[20，21，28]
+* 模态特征的细化：模态间的交互和融合[3-9，37，39，42]，局部对齐[17-19]，模态表征细粒度[20，21，28]，局部目标间的关系[46]
 * 结合其他外部信息，如字幕[35，36]
 
 对于二.  
@@ -264,6 +276,7 @@
 * 常规方法会提前切分好，或者修剪候选集[33]
 * 生成候选：预测一些可能的边界[10]
 * 探讨候选之间的关系：使用图或者矩阵的形式[13，26]
+* 正负例样本不平衡问题[45]
 
 定位方法可分直接预测和强化学习  
 * 直接预测起止点：[11，31，34，36，38]，对边界预测的多任务增强如边界感知[24]，moment segmentation[41]。
