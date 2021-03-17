@@ -255,10 +255,17 @@
 
 # 2021:1
 46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
+47[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
 
 [CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
 * 动机：基于候选的方法会导致候选之间非常相似难以区别，那么直接理解内容（局部目标）的细微变化会是更好的选择。
 * 方法：提出多模态关系图模型来捕捉视频中的局部目标之间的时空关系，并且在图预训练的框架下优化特征表达。
+
+[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
+* 动机：改善视频与文本之间的 latent alignment，学习上下文的视觉语义表征。
+* 方法：提出 latent co-attention 模型，通过多级 coattention 机制+在视频上的positional encodings。
+
+
 
 ----------
 # 稍作分类
