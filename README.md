@@ -253,9 +253,12 @@
 #水文趋势开始增加...
 
 
-# 2021:1
+# 2021:5
 46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
 47[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
+48[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics:o:  
+49[CVPR2021] Interventional Video Grounding with Dual Contrastive Learning
+50[SIGIR2021] Video Corpus Moment Retrieval with Contrastive Learning
 
 [CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
 * 动机：基于候选的方法会导致候选之间非常相似难以区别，那么直接理解内容（局部目标）的细微变化会是更好的选择。
@@ -265,6 +268,20 @@
 * 动机：改善视频与文本之间的 latent alignment，学习上下文的视觉语义表征。
 * 方法：提出 latent co-attention 模型，通过多级 coattention 机制+在视频上的positional encodings。
 
+[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics
+* 动机：这应该是最近很不错的文章了，详细讨论了现有数据集的偏差问题（即可能模型不需要学什么内容，直接学数据偏差就有不错的结果）。
+* 方法：然后作者提供了新的datasets和metrics，这个工作其实展现了现有的经典模型还是有比较多的问题，在这种去偏数据集下表现得很不理想。
+
+[CVPR2021] Interventional Video Grounding with Dual Contrastive Learning
+* 动机：这篇同样也是探究数据集中的选择偏差，从而使某些text和moment存在虚假关联。
+* 方法：提出双对比学习+因果推理。双对比学习是VV和QV，即尝试尽可能分离moment之间和moment query之间的语义。因果推理则利用因果干预P(Y|do(X))和事件作为混杂因素来学习表示。
+
+[SIGIR2021] Video Corpus Moment Retrieval with Contrastive Learning
+* 动机：一般使用的跨模态交互学习，高效率和高质量检索之间很难同时保持。
+* 方法：直接引入对比学习来改进视频编码器和文本编码器。其中视频对比学习旨在最大程度地提高查询和候选视频之间的相互信息。帧对比学习的目的是突出视频中帧级查询对应的片段。
+
+
+#年度关键词：数据集问题，更细致的视频理解，对比学习。
 
 
 ----------
@@ -275,7 +292,7 @@
 
 对于一.  
 
-* 模态特征的细化：模态间的交互和融合[3-9，37，39，42]，局部对齐[17-19]，模态表征细粒度[20，21，28]，局部目标间的关系[46]
+* 模态特征的细化：模态间的交互和融合[3-9，37，39，42]，局部对齐[17-19]，模态表征细粒度[20，21，28]，视觉目标间的关系[46]
 * 结合其他外部信息，如字幕[35，36]
 
 对于二.  
@@ -293,5 +310,5 @@
 
 除了一和二问题的，其他话题  
 * 标注text-video对太耗时，无监督方法[16，23，27，32]，主要会使用注意力对齐，正负样本对抗，多示例学习等等技术。
-* 标注鲁棒性[34，40，41]，解决方案主要有比较分布和标注预测。
+* 标注鲁棒性[34，40，41，48，49]，解决方案主要有比较分布和标注预测，因果推理。
 * 搜索全库视频时刻[35，38]，要求对模态内和模态外都有更好的理解和区分能力。
