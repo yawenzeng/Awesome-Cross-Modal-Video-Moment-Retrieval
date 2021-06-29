@@ -257,8 +257,8 @@
 46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
 47[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
 48[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics:o:  
-49[CVPR2021] Interventional Video Grounding with Dual Contrastive Learning
-50[SIGIR2021] Video Corpus Moment Retrieval with Contrastive Learning
+49[CVPR2021] Interventional Video Grounding with Dual Contrastive Learning  
+50[SIGIR2021] Video Corpus Moment Retrieval with Contrastive Learning  
 
 [CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
 * 动机：基于候选的方法会导致候选之间非常相似难以区别，那么直接理解内容（局部目标）的细微变化会是更好的选择。
