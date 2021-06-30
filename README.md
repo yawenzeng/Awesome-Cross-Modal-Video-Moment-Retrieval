@@ -250,7 +250,7 @@
 * 方法：预测起始结束帧，然后认为只要在ground truth中的片段都认为是正例。
 
 #年度关键词：任务扩展（如对全库搜索moment，增加字幕，标定鲁棒性等等），继续细化和融合，候选框关系。  
-#研究热情高涨，水文趋势开始增加...
+#研究热情高涨，水文趋势开始增加....
 
 
 # 2021:5
@@ -268,7 +268,7 @@
 * 动机：改善视频与文本之间的 latent alignment，学习上下文的视觉语义表征。
 * 方法：提出 latent co-attention 模型，通过多级 coattention 机制+在视频上的positional encodings。
 
-[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics
+[Arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics
 * 动机：这应该是最近很不错的文章了，详细讨论了现有数据集的偏差问题（即可能模型不需要学什么内容，直接学数据偏差就有不错的结果）。
 * 方法：然后作者提供了新的datasets和metrics，这个工作其实展现了现有的经典模型还是有比较多的问题，在这种去偏数据集下表现得很不理想。
 
