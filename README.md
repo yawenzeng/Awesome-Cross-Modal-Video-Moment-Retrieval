@@ -253,12 +253,17 @@
 #研究热情高涨，水文趋势开始增加....
 
 
-# 2021:5
+# 2021:10
 46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
 47[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
 48[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics:o:  
 49[CVPR2021] Interventional Video Grounding with Dual Contrastive Learning  
 50[SIGIR2021] Video Corpus Moment Retrieval with Contrastive Learning  
+51[SIGIR2021] Deconfounded Video Moment Retrieval with Causal Intervention  
+52[SIGIR2021] Cross Interaction Network for Natural Language Guided Video Moment Retrieval  
+53[ACL2021] mTVR: Multilingual Moment Retrieval in Videos  
+54[MM2021] CONQUER: Contextual Query-aware Ranking for Video Corpus Moment Retrieval  
+
 
 [CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
 * 动机：基于候选的方法会导致候选之间非常相似难以区别，那么直接理解内容（局部目标）的细微变化会是更好的选择。
@@ -280,8 +285,27 @@
 * 动机：一般使用的跨模态交互学习，高效率和高质量检索之间很难同时保持。
 * 方法：直接引入对比学习来改进视频编码器和文本编码器。其中视频对比学习旨在最大程度地提高查询和候选视频之间的相互信息。帧对比学习的目的是突出视频中帧级查询对应的片段。
 
+[SIGIR2021] Deconfounded Video Moment Retrieval with Causal Intervention
+* 动机：现有的模型往往都利用数据集偏差，如何减少这种偏差是很重要的。
+* 方法：提出一个结构性受因果关系启发的框架。具体来说提出解纠缠的跨模态匹配(DCM)方法来消除位置对预测结果的混杂效应，其先推断视觉内容的核心特征，然后用对基于后门调整的解纠缠多模态输入进行因果干预，迫使模型公平地考虑目标的每个可能的位置。
 
-#年度关键词：数据集问题，更细致的视频理解，对比学习。
+[SIGIR2021] Cross Interaction Network for Natural Language Guided Video Moment Retrieval
+* 动机：现有技术一般只强调文本到视频的单交互，且设计复杂效率低。
+* 方法：提出结合一种自我注意和交叉交互的多头部注意机制，以捕获视频查询的内部依赖关系以及两个方向的相互关系。
+
+[ACL2021] mTVR: Multilingual Moment Retrieval in Videos
+* 动机：短文。提出一个的大规模新数据集，其中有双语数据。
+
+[MM2021] CONQUER: Contextual Query-aware Ranking for Video Corpus Moment Retrieval
+* 动机：目前的单阶段方法无法处理实时的结果，同时计算和存储复杂。
+* 方法：使用两阶段的步骤，即这两个步骤是先依赖查询进行视频内容的自适应融合，再执行双向注意以结合某个clip内容进行时刻定位学习，以学习聚合剪辑和查询信息的新表示。
+
+[MM2021] Visual Co-Occurrence Alignment Learning for Weakly-Supervised Video Moment Retrieval
+
+
+
+#年度关键词：数据集问题，更细致的视频理解，对比学习。  
+#注：由于文章众多，暂时只整理顶会中比较角度不一样的文章。
 
 
 ----------
