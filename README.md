@@ -253,7 +253,7 @@
 #研究热情高涨，水文趋势开始增加....
 
 
-# 2021:10
+# 2021:11
 46[CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval:o:  
 47[WACV2021] LoGAN: Latent Graph Co-Attention Network for Weakly-Supervised Video Moment Retrieval  
 48[arxiv2021] A Closer Look at Temporal Sentence Grounding in Videos_ Datasets and Metrics:o:  
@@ -262,6 +262,7 @@
 51[SIGIR2021] Deconfounded Video Moment Retrieval with Causal Intervention  
 52[SIGIR2021] Cross Interaction Network for Natural Language Guided Video Moment Retrieval  
 53[ACL2021] mTVR: Multilingual Moment Retrieval in Videos  
+53[ICCV2021] Fast Video Moment Retrieval  
 54[MM2021] CONQUER: Contextual Query-aware Ranking for Video Corpus Moment Retrieval  
 
 
@@ -295,6 +296,10 @@
 
 [ACL2021] mTVR: Multilingual Moment Retrieval in Videos
 * 动机：短文。提出一个的大规模新数据集，其中有双语数据。
+
+[ICCV2021] Fast Video Moment Retrieval
+* 动机：现有模型的跨模态交互模块太耗时，想要提高时间。
+* 方法：提出细粒度的语义蒸馏框架来转移知识，即用跨模态公共空间替换跨模态交互模块，其中蒸馏过程将语义转移到公共空间。
 
 [MM2021] CONQUER: Contextual Query-aware Ranking for Video Corpus Moment Retrieval
 * 动机：目前的单阶段方法无法处理实时的结果，同时计算和存储复杂。
