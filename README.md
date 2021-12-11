@@ -264,6 +264,7 @@
 53[ACL2021] mTVR: Multilingual Moment Retrieval in Videos  
 53[ICCV2021] Fast Video Moment Retrieval  
 54[MM2021] CONQUER: Contextual Query-aware Ranking for Video Corpus Moment Retrieval  
+55[arxiv2021] Hierarchical Deep Residual Reasoning for Temporal Moment Localization
 
 
 [CVPR 2021] Multi-Modal Relational Graph for Cross-Modal Video Moment Retrieval
@@ -307,6 +308,9 @@
 
 [MM2021] Visual Co-Occurrence Alignment Learning for Weakly-Supervised Video Moment Retrieval
 
+[arxiv2021] Hierarchical Deep Residual Reasoning for Temporal Moment Localization
+- 动机：目前方法对细粒度的处理不够完善，此外对信息容量不同的视频和文本缺乏自适应
+- 方法：通过语义将文本分为不同角色，进行hierarchical的匹配。另外提出Res-BiGRU结构增强自适应能力
 
 
 #年度关键词：数据集问题，更细致的视频理解，对比学习。  
