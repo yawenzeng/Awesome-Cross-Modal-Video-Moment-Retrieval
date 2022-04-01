@@ -307,10 +307,31 @@
 
 [MM2021] Visual Co-Occurrence Alignment Learning for Weakly-Supervised Video Moment Retrieval
 
-
-
 #年度关键词：数据集问题，更细致的视频理解，对比学习。  
 #注：由于文章众多，暂时只整理顶会中比较角度不一样的文章。
+
+
+# 2022:x
+55[Survey] A Survey on Temporal Sentence Grounding in Videos:o:  
+56[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions:o:  
+57[TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
+58[TMM2022] Regularized Two Granularity Loss Function for Weakly Supervised Video Moment Retrieval  
+59[TOMM2022] Moment is Important: Language-Based Video Moment Retrieval via Adversarial Learning  
+60[Arxiv2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+61[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
+62[Arxiv2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering  
+63[Arxiv2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
+64[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding  
+65[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
+
+55[Survey] A Survey on Temporal Sentence Grounding in Videos  
+56[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions  
+* 动机：这两篇综述文章都写的很好。
+
+
+
+#Note：最新AAAI、CVPR、SIGIR的文章近两周会补。  
+#有推荐的“好”论文但未被list的请私信我。
 
 
 ----------
