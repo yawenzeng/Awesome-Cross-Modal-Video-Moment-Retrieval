@@ -317,7 +317,7 @@
 57[TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
 58[TMM2022] Regularized Two Granularity Loss Function for Weakly Supervised Video Moment Retrieval  
 59[TOMM2022] Moment is Important: Language-Based Video Moment Retrieval via Adversarial Learning  
-60[Arxiv2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+60[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
 61[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
 62[Arxiv2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering  
 63[Arxiv2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
@@ -328,6 +328,9 @@
 56[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions  
 * 动机：这两篇综述文章都写的很好。
 
+[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+* 动机：现有方法没有考虑 moment retrieval 和 highlight detection 两大任务的关联，也无法同时适应多种模态（视频、音频、查询文字）不同组合的场景。
+* 方法：提出一个统一的多模态框架，能够适应不同输入-输出组合，并将子任务集成到不同 head 中。对于 moment retrieval 任务，首次将其定义为关键点检测问题，即通过三个一维卷积分别估计 moment 的中心点、长度和偏移量。
 
 
 #Note：最新AAAI、CVPR、SIGIR的文章近两周会补。  
