@@ -317,20 +317,69 @@
 57[TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
 58[TMM2022] Regularized Two Granularity Loss Function for Weakly Supervised Video Moment Retrieval  
 59[TOMM2022] Moment is Important: Language-Based Video Moment Retrieval via Adversarial Learning  
-60[Arxiv2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+60[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
 61[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
-62[Arxiv2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering  
-63[Arxiv2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
-64[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding  
-65[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
+62[AAAI2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering:o:  
+63[AAAI2022] Memory-Guided Semantic Learning Network for Temporal Sentence Grounding  
+64[ICMR2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
+65[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding:o:  
+66[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
+67[SIGIR2022] You Need to Read Again: Multi-granularity Perception Network for Moment Retrieval in Videos  
 
-55[Survey] A Survey on Temporal Sentence Grounding in Videos  
-56[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions  
-* 动机：这两篇综述文章都写的很好。
+[Survey] A Survey on Temporal Sentence Grounding in Videos  
+[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions  
+* 动机：这两篇综述文章都写的很好，可以详细看看  
+
+[TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
+* 动机：以往的工作都依赖手工or专家设计，不够灵活。
+* 方法：使用神经架构搜索来做VMR任务。具体来说，基于有向无环图搜索可重复的单元网络架构，然后，通过查询感知的注意力调节无环图中的边权。
+
+[TMM2022] Regularized Two Granularity Loss Function for Weakly Supervised Video Moment Retrieval  
+* 动机：弱监督视频时刻检索。
+* 方法：设计双粒度损失函数考虑视频级和实例级关系。具体来说，先生成粗粒度的视频片段，然后利用所有视频内片段（即正例）和文本描述之间的多实例学习。然后将此过程视为噪声标签下的弱监督学习任务来对进一步这些片段进行分类进行精细度定位。
+
+[TOMM2022] Moment is Important: Language-Based Video Moment Retrieval via Adversarial Learning  
+* 动机：[29]的扩展论文，对抗性VMR在训练时容易不稳定。
+* 方法：因此将多个子任务变为持续学习的形式以优化对抗性VMR的学习。
+
+[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+* 动机：联合moment retrieval和highlight detection这俩子任务以更好地为应用服务。
+* 方法：视频和音频首先通过uni-modal进行融合，如果query不提供将生成query，不然就直接完成编码后预测highlight和offset。
+
+[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
+* 动机：统一proposal-free（直接预测的探索）和proposal-based（切分再检索的匹配）这俩方案。
+* 方法：将该任务定义为一个集合预测问题，先探索再匹配。首先时间定位损失执行proposal-free，然后设置指导损失将每个查询进行匹配。
+
+[AAAI2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering  
+* 动机：无监督TVG。在现实场景中收集数据既昂贵又耗时，这是第一篇做无监督的文章。
+* 方法：使用提出深度语义聚类网络（DSCNet）利用整个查询集中的所有语义信息来组合每个视频中可能的活动以进行定位。具体来说，先从整个查询集中提取隐式语义特征，然后将其作为指导在视频中组合活动，最后利用前景注意力分支过滤掉多余的背景活动并细化定位结果。
+
+[AAAI2022] Memory-Guided Semantic Learning Network for Temporal Sentence Grounding  
+* 动机：数据分布不平衡，容易忘记训练过程中很少出现的情况，这会影响模型的泛化能力。
+* 方法：使用记忆增强网络来学习和记忆。具体来说，跨模态图卷积网络对齐给定的视频查询对，然后利用内存模块将跨模态共享语义特征记录内存中，来减轻遗忘问题。
+
+[ICMR2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
+* 动机：针对superficial biases的文章（如[48]中提过的某些时间偏好等等）。
+* 方法：提出去偏时间语言定位器 (DebiasTLL) ，其同时训练两个模型，如果这两个模型在判断样本时的预测差异大，则成为有偏样本的可能性更高。因此利用信息差异设计数据重新加权方案来减轻数据偏差。
+
+[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding  
+* 动机：基于Prompt learning的新方法。作者认为现有方法都没有能够利用好现有预训练大模型的成果，但其实利用Prompt技巧就能够做得很好。
+* 方法：加入Prompt、改装TLG任务以适应大模型，几乎是文本和视频直接作为input输入即可。速度较快，训练只需要训练几层FC，就能轻松利用大模型的语义能力。
+
+[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
+* 动机：完全监督很贵，但其实只需要"glance annotation"就够了。
+* 方法：只需要在完全监督内的随机帧，即“一瞥”，加上对比学习在clip和query之间进行对比，其中“一瞥”的高斯分布权重分配给所有clip。
+
+[SIGIR2022] You Need to Read Again: Multi-granularity Perception Network for Moment Retrieval in Videos  
+* 动机：以前的方法倾向于以粗略的方式执行单模态学习和跨模态交互，而忽略了视频内容、查询上下文及其对齐中包含的细粒度线索。
+* 方法：提出多粒度感知网络，在多粒度级别感知模态内和模态间信息。
 
 
 
-#Note：最新AAAI、CVPR、SIGIR的文章近两周会补。  
+#年度关键词：新的任务形态、多范式的结合、更高效、提示学习的应用。  
+#新玩法开始变得多样起来。  
+
+#等MM22开会了再补文章。
 
 
 ----------
@@ -355,11 +404,12 @@
 * 直接预测起止点：[11，31，34，36，38]，对边界预测的多任务增强如边界感知[24]，moment segmentation[41]。
 * 强化学习：[12，14，15，25，29]，主要涉及一些语义概念融合，如何使强化学习更高效。
 
-也有融合定位和检索的方法[30]  
+也有融合定位和检索的方法[30]，和其他任务结合的方法[50,60]  
 
 除了一和二问题的，其他话题  
 * 标注text-video对太耗时，无监督方法[16，23，27，32]，主要会使用注意力对齐，正负样本对抗，多示例学习等等技术。
-* 标注鲁棒性[34，40，41，48，49]，解决方案主要有比较分布和标注预测，因果推理。
+* 标注鲁棒性[34，40，41，48，49]，解决方案主要有比较分布和标注预测，因果推理，去偏。
+* 收集数据集太耗时[62,66]，也是转向于无监督或者少样本学习。
 * 搜索全库视频时刻[35，38]，要求对模态内和模态外都有更好的理解和区分能力。
 
 
