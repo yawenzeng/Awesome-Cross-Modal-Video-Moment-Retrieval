@@ -374,6 +374,9 @@
 * 动机：以前的方法倾向于以粗略的方式执行单模态学习和跨模态交互，而忽略了视频内容、查询上下文及其对齐中包含的细粒度线索。
 * 方法：提出多粒度感知网络，在多粒度级别感知模态内和模态间信息。
 
+[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
+* 动机：现有方法没有考虑 moment retrieval 和 highlight detection 两大任务的关联，也无法同时适应多种模态（视频、音频、查询文字）不同组合的场景。
+* 方法：提出一个统一的多模态框架，能够适应不同输入-输出组合，并将子任务集成到不同 head 中。对于 moment retrieval 任务，首次将其定义为关键点检测问题，即通过三个一维卷积分别估计 moment 的中心点、长度和偏移量。
 
 
 #年度关键词：新的任务形态、多范式的结合、更高效、提示学习的应用。  
