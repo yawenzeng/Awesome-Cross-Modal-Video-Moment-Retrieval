@@ -311,24 +311,34 @@
 #注：由于文章众多，暂时只整理顶会中比较角度不一样的文章。
 
 
-# 2022:x
+# 2022:19
 55[Survey] A Survey on Temporal Sentence Grounding in Videos:o:  
 56[Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions:o:  
+57[Book]Towards temporal sentence grounding in videos  
 57[TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
 58[TMM2022] Regularized Two Granularity Loss Function for Weakly Supervised Video Moment Retrieval  
 59[TOMM2022] Moment is Important: Language-Based Video Moment Retrieval via Adversarial Learning  
 60[CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
-61[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
-62[AAAI2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering:o:  
-63[AAAI2022] Memory-Guided Semantic Learning Network for Temporal Sentence Grounding  
-64[ICMR2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
-65[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding:o:  
-66[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
-67[SIGIR2022] You Need to Read Again: Multi-granularity Perception Network for Moment Retrieval in Videos  
+61[CVPR2022] AxIoU: An Axiomatically Justified Measure for Video Moment Retrieval  
+62[Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
+63[AAAI2022] Unsupervised Temporal Video Grounding with Deep Semantic Clustering:o:  
+64[AAAI2022] Memory-Guided Semantic Learning Network for Temporal Sentence Grounding  
+65[ICMR2022] Learning Sample Importance for Cross-Scenario Video Temporal Grounding  
+66[SIGIR2022] Point Prompt Tuning for Temporally Language Grounding:o:  
+67[SIGIR2022] Video Moment Retrieval from text Queries via Single Frame Annotation  
+68[SIGIR2022] You Need to Read Again: Multi-granularity Perception Network for Moment Retrieval in Videos  
+69[ECCV2022] Selective Query-Guided Debiasing for Video Corpus Moment Retrieval  
+70[EMNLP2022] Modal-specific Pseudo Query Generation for Video Corpus Moment Retrieval  
+71[MM2022] Interactive Video Corpus Moment Retrieval using Reinforcement Learning  
+72[MM2022] Prompt-based Zero-shot Video Moment Retrieval  
+73[MM2022] Video Moment Retrieval with Hierarchical Contrastive Learning  
+
+
 
 [Survey] A Survey on Temporal Sentence Grounding in Videos  
 [Survey] The Elements of Temporal Sentence Grounding in Videos: A Survey and Future Directions  
-* 动机：这两篇综述文章都写的很好，可以详细看看  
+[Book]Towards temporal sentence grounding in videos  
+* 动机：这几篇综述文章都写的很好，可以详细看看  
 
 [TIP2022] Video Moment Retrieval With Cross-Modal Neural Architecture Search  
 * 动机：以往的工作都依赖手工or专家设计，不够灵活。
@@ -345,6 +355,10 @@
 [CVPR2022] UMT: Unified Multi-modal Transformers for Joint Video Moment Retrieval and Highlight Detection  
 * 动机：联合moment retrieval和highlight detection这俩子任务以更好地为应用服务。
 * 方法：视频和音频首先通过uni-modal进行融合，如果query不提供将生成query，不然就直接完成编码后预测highlight和offset。
+
+[CVPR2022] AxIoU: An Axiomatically Justified Measure for Video Moment Retrieval  
+* 动机：现在评价这个领域的性能，一般只使用R@K，但它的缺点在于1对排名不敏感；2使用二值化的IoU会损失细粒度质量，因此作者们提出了一个新指标AxIoU。
+* 方法：AxIoU是平均最大IoU，其满足对最佳片段的冗余不变性和单调性，值得一看。
 
 [Arxiv2022] Explore and Match: End-to-End Video Grounding with Transformer  
 * 动机：统一proposal-free（直接预测的探索）和proposal-based（切分再检索的匹配）这俩方案。
@@ -374,12 +388,62 @@
 * 动机：以前的方法倾向于以粗略的方式执行单模态学习和跨模态交互，而忽略了视频内容、查询上下文及其对齐中包含的细粒度线索。
 * 方法：提出多粒度感知网络，在多粒度级别感知模态内和模态间信息。
 
+[ECCV2022] Selective Query-Guided Debiasing for Video Corpus Moment Retrieval  
+* 动机：一篇矫正定位偏差的工作。作者们认为现有模型都是在学习查询和片段之间的共现pattern，从而使模型将查询中对象（例如铅笔）与该对象经常出现在视频中的片段（例如用铅笔书写的场景）虚假关联。
+* 方法：提出Selective Query-guided Debiasing network (SQuiDNet)，来进行selective debiasing。
 
+[EMNLP2022] Modal-specific Pseudo Query Generation for Video Corpus Moment Retrieval  
+* 动机：目前的方法们强依赖于数据集在时序上的昂贵注释，因此提出一个自监督方法来缓解。
+* 方法：自监督学习框架即，Modal-specific Pseudo Query Generation（MPGN）。具体来说，MPGN通过字幕的时刻采样来获取时间的时刻，然后用所选时间时刻的视觉和文本信息生成伪查询。
 
-#年度关键词：新的任务形态、多范式的结合、更高效、提示学习的应用。  
+[MM2022] Interactive Video Corpus Moment Retrieval using Reinforcement Learning  
+* 动机：目前的方法们对于相似的片段、或候选再很深或隐秘的时候，模型需要长时间的浏览和结果检查，因此文章基于强化学习期望在几轮交互内就达到搜索目标。
+* 方法：具体来说，系统根据反馈交互式地规划导航路径，并推荐一个潜在目标，最大限度地提高用户评论的长期奖励。
+
+[MM2022] Prompt-based Zero-shot Video Moment Retrieval  
+* 动机：作者们认为由于视频和文本学习过程的分离，全局视觉特征往往被忽略。因此作者提出了一种基于提示的零样本视频时刻检索（PZVMR）方法。
+* 方法：这种基于提示学习的方法分为提案提示（PP）和动词提示（VP），以使得模型从预先训练的 CLIP 中提取的任务相关知识，并将这些知识适应这个任务。
+
+[MM2022] Video Moment Retrieval with Hierarchical Contrastive Learning  
+* 动机：目前的方法们大多只关注对齐查询和单级剪辑或时刻特征，而忽略了视频本身涉及的不同粒度。
+* 方法：提出了一种具有分层对比学习的时间定位网络（HCLNet）。具体来说，作者们引入了一种分层对比学习方法，通过最大化查询和三种不同粒度的视频之间的互信息（MI）来更好地对齐查询和视频，以学习信息表示。
+
+#年度关键词：新的任务形态、多范式的结合、更高效、提示学习、去偏和新指标。  
 #新玩法开始变得多样起来。  
 
-#等MM22开会了再补文章。
+
+# 2023:x
+74[Survey] Temporal Sentence Grounding in Videos: A Survey and Future Directions  
+75[Survey] A Closer Look at Debiased Temporal Sentence Grounding in Videos: Dataset, Metric, and Approach  
+76[TMM2023] Temporally Language Grounding with Multi-modal Multi-Prompt Tuning  
+77[ACL2023] CONE: An Efficient COarse-to-fiNE Alignment Framework for Long Video Temporal Grounding  
+78[ACL2023] Towards Parameter-Efficient Integration of Pre-Trained Language Models In Temporal Video Grounding  
+79[SIGIR2023] RewardTLG: Learning to Temporally Language Grounding from Flexible Reward  
+
+
+[Survey] Temporal Sentence Grounding in Videos: A Survey and Future Directions  
+[Survey] A Closer Look at Debiased Temporal Sentence Grounding in Videos: Dataset, Metric, and Approach  
+* 动机：综述文章越来越多 
+
+[TMM2023] Temporally Language Grounding with Multi-modal Multi-Prompt Tuning  
+* 动机：多模态预训练+提示学习。
+* 方法：这篇文章讨论了各种提示模版对于这一任务的影响，包括固定prompt和可学习的prompt。
+
+[ACL2023] CONE: An Efficient COarse-to-fiNE Alignment Framework for Long Video Temporal Grounding  
+* 动机：对于定位任务来说，长视频的需求更大，但目前探索少，主要是由于长视频的推理速度。
+* 方法：为了提速，作者提出一种高效的从粗到细的对齐框架，主要是查询引导的窗口选择策略来加速推理+结合对比学习从粗到细，在Ego4D-NLQ 上的推理时间加快2倍，MAD上的推理时间快15倍。
+
+[ACL2023] Towards Parameter-Efficient Integration of Pre-Trained Language Models In Temporal Video Grounding  
+* 动机：基于Pre-Trained Language Models，并评估了大模型中参数高效训练的适用性。
+* 方法：做了很多有意义的实验，其中1更大的语言模型肯定是对效果有增益的；2adapter训练而不是全参数对于大模型来说更划算。
+
+[SIGIR2023] RewardTLG: Learning to Temporally Language Grounding from Flexible Reward  
+* 动机：大模型之后，reward model也来了。
+* 方法：这篇文章收集了人类反馈数据训了一个奖励模型，用于指导强化学习的收敛。
+
+
+#年度关键词： 大模型时代来临之后，这个小方向也有开始往预训练、提示学习、强化学习、reward model转的趋势。
+
 
 
 ----------
