@@ -446,6 +446,17 @@
 
 
 
+# 2026:3
+
+[arXiv2026] [VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding](https://arxiv.org/abs/2607.14935) [[Code]](https://github.com/MCG-NJU/VideoChat3)
+* 方法：通用视频模型，通过 I3D-ViT 时空压缩支持高效视频理解，并评估视频时间定位。
+
+[arXiv2026] [TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs](https://arxiv.org/abs/2607.17423) [[Code]](https://github.com/MCG-NJU/TimeLens2)
+* 方法：验证式 SFT 与时间定位 GRPO，覆盖长视频、第一人称视频等七种定位设置。
+
+[arXiv2026] [VideoJev: System One Model for Video Understanding and Interaction](https://arxiv.org/abs/2610.18615) [[Code]](https://github.com/MCG-NJU/VideoJev)
+* 方法：把时间定位与选择题问答统一为候选打分，同视频多个查询共享一次前向计算。
+
 ----------
 ## 稍作分类
 * 两条路：处理成预测任务[1]；处理成匹配任务[2]。大多数文章都follow了[1]，也有少数沿着[2]的路线的文章如[5][22]，也有融合这两条路线的[33]。  
